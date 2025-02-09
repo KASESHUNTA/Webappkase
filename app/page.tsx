@@ -21,12 +21,12 @@ export default function Home() {
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
   const [bgColor, setBgColor] = useState("bg-green-100");
 
-  // 🔹 useEffectで音声オブジェクトを作成
+
   useEffect(() => {
     setAudio(new Audio("/garagara.mp3"));
   }, []);
 
-  // 音声再生関数
+
   const playSound = () => {
     if (!audio) return; // 🔹 audioがnullの時は何もしない
     audio.currentTime = 0;

@@ -22,7 +22,7 @@ export default function Detail() {
         const params = new URLSearchParams(window.location.search);
         const luck = params.get("luck");
 
-        // 該当する運勢の詳細を検索
+     
         const detail = data.find((item: FortuneData) => item.luck === luck);
         setFortuneDetail(detail || null);
       } catch (error) {
